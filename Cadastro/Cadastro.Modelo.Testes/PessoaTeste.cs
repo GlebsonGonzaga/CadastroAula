@@ -36,5 +36,10 @@ namespace Cadastro.Modelo.Testes
             Assert.AreEqual(0, 0);
         }
 
+        [Test]
+        public void teste_inoquo()
+        {
+            Assert.AreEqual(0, 0);
+        }
     }
 }
