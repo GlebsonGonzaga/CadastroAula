@@ -20,6 +20,10 @@ namespace Cadastro.DAL.EntityFrameworkProvider
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //ADO.NET EF Team Blog: http://blogs.msdn.com/b/adonet/
+
+            //Fluent API - Mapeamento: http://msdn.microsoft.com/en-us/data/jj591620.aspx
+
             //Mapeamento 1-To-M -> Fisica Has M Telefones
             modelBuilder.Entity<Pessoa>().HasMany(c => c.Telefones).WithOptional(f => f.Pessoa).WillCascadeOnDelete(true);
 
