@@ -25,7 +25,7 @@ namespace Cadastro.Repositorios
 
         public Pessoa Buscar(Guid id)
         {
-            return pessoasFisicas.FirstOrDefault(p => p.ID == id);
+            return pessoasFisicas.FirstOrDefault(p => p.Id == id);
         }
     }
 }

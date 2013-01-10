@@ -10,7 +10,7 @@ namespace Cadastro.DAL.SqlProvider
         protected override string GetInsertCommand(Fisica entidade)
         {
             return String.Format("INSERT INTO FISICA (ID, NOME, IDADE, SEXO) VALUES ('{0}', '{1}', {2}, '{3}')",
-                entidade.ID, entidade.Nome, entidade.Idade, entidade.Sexo);
+                entidade.Id, entidade.Nome, entidade.Idade, entidade.Sexo);
         }
 
         protected override string GetSelectCommand()
@@ -27,7 +27,7 @@ namespace Cadastro.DAL.SqlProvider
         {
             Fisica fisica = new Fisica();
 
-            fisica.ID = Guid.Parse(reader[0].ToString());
+            fisica.Id = Guid.Parse(reader[0].ToString());
             fisica.Nome = reader[1].ToString();
             fisica.Idade = int.Parse(reader[2].ToString());
             fisica.Sexo = reader[3].ToString();
