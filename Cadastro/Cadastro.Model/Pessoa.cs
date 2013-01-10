@@ -8,7 +8,7 @@ namespace Cadastro.Model
 {
     public abstract class Pessoa
     {
-        private List<Telefone> _telefones = new List<Telefone>(); 
+        private List<Telefone> _telefones = new List<Telefone>();
         
         protected Pessoa() 
         {
@@ -20,16 +20,14 @@ namespace Cadastro.Model
         public virtual List<Telefone> Telefones 
         {
             get 
-            { 
-                return _telefones; 
+            {
+                return _telefones;
             }
-            set { _telefones = value; }
         }
 
         public void AdicionarTelefone(int ddd, int numero)
         {
-            //_telefones.Add(new Telefone() { Id = Guid.NewGuid(), DDD = ddd, Numero = numero });
-            _telefones.Add(new Telefone() { Id = Guid.NewGuid(), Pessoa = this, DDD = ddd, Numero = numero });
+            _telefones.Add(new Telefone() { Id = Guid.NewGuid(), DDD = ddd, Numero = numero });
         }
     }
 }

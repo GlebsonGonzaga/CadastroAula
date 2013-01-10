@@ -13,7 +13,7 @@ namespace Cadastro.Modelo.Testes
         private readonly Guid id = Guid.Parse("{A691E98C-DE82-49CD-A26B-D5B8D8C5C30F}");
 
         [Test]
-        public void criar_pessoa_fisica_utilizando_entity_framework()
+        public void a_criar_pessoa_fisica_utilizando_entity_framework()
         {
             Fisica fisica = new Fisica();
             fisica.Id = id;
@@ -27,23 +27,17 @@ namespace Cadastro.Modelo.Testes
             List<Fisica> fisicas = Factory.DaoFactory.GetFisicaDao().GetAll();
             
             Assert.That(fisicas.Contains(fisica));
-
-            excluir_pessoa_fisica_utilizando_entity_framework();
         }
 
         [Test]
-        public void buscar_pessoa_fisica_utilizando_entity_framework()
+        public void b_buscar_pessoa_fisica_utilizando_entity_framework()
         {
-            criar_pessoa_fisica_utilizando_entity_framework();
-
             Fisica fisica = Factory.DaoFactory.GetFisicaDao().GetAll().FirstOrDefault(p => p.Id == id);
             Assert.That(fisica != null);
-
-            excluir_pessoa_fisica_utilizando_entity_framework();
         }
 
         [Test]
-        public void excluir_pessoa_fisica_utilizando_entity_framework()
+        public void c_excluir_pessoa_fisica_utilizando_entity_framework()
         {
             Fisica fisica = Factory.DaoFactory.GetFisicaDao().GetAll().FirstOrDefault(p => p.Id == id);
             Factory.DaoFactory.GetFisicaDao().Delete(fisica);

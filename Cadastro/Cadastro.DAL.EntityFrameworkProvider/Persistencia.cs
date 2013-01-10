@@ -30,7 +30,6 @@ namespace Cadastro.DAL.EntityFrameworkProvider
             return _instance;
         }
 
-
         public IDAL<Fisica> FisicaDao { get { return _fisicaDao; } }
     }
 }
