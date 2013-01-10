@@ -32,7 +32,6 @@ namespace Cadastro.DAL.EntityFrameworkProvider
 
         public void Delete(Fisica entity)
         {
-            //entity.Telefones.ForEach(t => _context.Telefones.Remove(t));
             _context.Fisicas.Remove(entity);
             SaveAll();
         }
