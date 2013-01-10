@@ -11,7 +11,6 @@ namespace Cadastro.DAL.EntityFrameworkProvider
     public class ModelContext : DbContext
     {
         public DbSet<Fisica> Fisicas { get; set; }
-        public DbSet<Telefone> Telefones { get; set; }
 
         public ModelContext(string connectionString) : base(connectionString)
         {
@@ -20,20 +19,17 @@ namespace Cadastro.DAL.EntityFrameworkProvider
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //ADO.NET EF Team Blog: http://blogs.msdn.com/b/adonet/
-
-            //Fluent API - Mapeamento: http://msdn.microsoft.com/en-us/data/jj591620.aspx
-
-            //Mapeamento 1-To-M -> Fisica Has M Telefones
+            //Ex.: Mapeamento 1-To-M -> Fisica Has M Telefones
             modelBuilder.Entity<Pessoa>().HasMany(c => c.Telefones).WithOptional(f => f.Pessoa).WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Fisica>().HasKey(c => c.Id).ToTable("Fisica");
-            modelBuilder.Entity<Fisica>().Property(c => c.Id).HasColumnName("FisicaID");
-            modelBuilder.Entity<Fisica>().Property(c => c.Nome).HasColumnName("Nome");
+            modelBuilder.Entity<Fisica>().Property(c => c.Id).HasColumnName("Id");
             
-
+            //Ex.: Adicionando Chave Primária Composta
             //modelBuilder.Entity<Telefone>().HasKey(k => new {k.DDD, k.Numero});
 
+
+            //Ex.: Mapeamentos Diversos
             //modelBuilder.Entity<Category>().HasMany(c => c.Products).WithRequired(c => c.Category).Map(map => .MapKey("CategoryID"));
 
             //modelBuilder.Entity<Product>().HasKey(p => p.ID).ToTable("Products");
@@ -59,3 +55,6 @@ namespace Cadastro.DAL.EntityFrameworkProvider
         }
     }
 }
+
+//ADO.NET EF Team Blog: http://blogs.msdn.com/b/adonet/
+//Fluent API - Mapeamento: http://msdn.microsoft.com/en-us/data/jj591620.aspx

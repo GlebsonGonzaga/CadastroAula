@@ -28,7 +28,6 @@ namespace Cadastro.Model
 
         public void AdicionarTelefone(int ddd, int numero)
         {
-            //_telefones.Add(new Telefone() { Id = Guid.NewGuid(), DDD = ddd, Numero = numero });
             _telefones.Add(new Telefone() { Id = Guid.NewGuid(), Pessoa = this, DDD = ddd, Numero = numero });
         }
     }
