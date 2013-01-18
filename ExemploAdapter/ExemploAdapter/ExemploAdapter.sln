@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploAdapter.Modelo", "ExemploAdapter.Modelo\ExemploAdapter.Modelo.csproj", "{53252407-B8E1-475E-B563-286254EF2784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploAdapter.Modelo.Interface", "ExemploAdapter.Modelo.Interface\ExemploAdapter.Modelo.Interface.csproj", "{3146849E-29FE-441D-937C-EC162D45B663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploAdapter.Factory", "ExemploAdapter.Factory\ExemploAdapter.Factory.csproj", "{5253AAAC-4277-4FA3-8A49-137CB03CDE77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploAdapter.Test", "ExemploAdapter.Test\ExemploAdapter.Test.csproj", "{5F22EB29-3A00-4EF8-8782-7D5968191164}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53252407-B8E1-475E-B563-286254EF2784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53252407-B8E1-475E-B563-286254EF2784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53252407-B8E1-475E-B563-286254EF2784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53252407-B8E1-475E-B563-286254EF2784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3146849E-29FE-441D-937C-EC162D45B663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3146849E-29FE-441D-937C-EC162D45B663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3146849E-29FE-441D-937C-EC162D45B663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3146849E-29FE-441D-937C-EC162D45B663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5253AAAC-4277-4FA3-8A49-137CB03CDE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5253AAAC-4277-4FA3-8A49-137CB03CDE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5253AAAC-4277-4FA3-8A49-137CB03CDE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5253AAAC-4277-4FA3-8A49-137CB03CDE77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F22EB29-3A00-4EF8-8782-7D5968191164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F22EB29-3A00-4EF8-8782-7D5968191164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F22EB29-3A00-4EF8-8782-7D5968191164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F22EB29-3A00-4EF8-8782-7D5968191164}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
